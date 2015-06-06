@@ -25,7 +25,8 @@ version=$(cat ../../scripts/version.py | grep "VERSION = '" | grep -v "SO_VERSIO
 
 rm -rf birdfont-$version
 
-git clone --depth 1 --no-hardlinks --local $rep
+git clone --depth 50 --no-hardlinks file://$rep
+git checkout 2.9
 
 mv birdfont birdfont-$version
 
